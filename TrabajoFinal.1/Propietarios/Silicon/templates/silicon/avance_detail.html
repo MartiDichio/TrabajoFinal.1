@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Detalle del Avance</title>
+</head>
+<body>
+    <h1>{{ avance.descripcion }}</h1>
+    <p>Progreso: {{ avance.progreso }}</p>
+    <p>Fecha: {{ avance.fecha }}</p>
+    <a href="{% url 'avance_list' %}">Volver a la lista</a>
+    <form method="post" action="{% url 'avance_delete' avance.pk %}">
+        {% csrf_token %}
+        <button type="submit">Eliminar</button>
+    </form>
+</body>
+</html>

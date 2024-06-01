@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Lista de Avances</title>
+</head>
+<body>
+    <h1>Lista de Avances</h1>
+    <ul>
+        {% for avance in avances %}
+            <li><a href="{% url 'avance_detail' avance.pk %}">{{ avance.descripcion }}</a></li>
+        {% endfor %}
+    </ul>
+    <a href="{% url 'avance_create' %}">Crear nuevo avance</a>
+</body>
+</html>
+

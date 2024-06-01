@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Crear Avance</title>
+</head>
+<body>
+    <h1>Crear Avance</h1>
+    <form method="post">
+        {% csrf_token %}
+        <label for="descripcion">Descripción:</label>
+        <input type="text" name="descripcion" id="descripcion" required><br>
+        <label for="progreso">Progreso:</label>
+        <input type="number" name="progreso" id="progreso" required><br>
+        <label for="fecha">Fecha:</label>
+        <input type="date" name="fecha" id="fecha" required><br>
+        <button type="submit">Guardar</button>
+    </form>
+    <a href="{% url 'avance_list' %}">Volver a la lista</a>
+</body>
+</html>
